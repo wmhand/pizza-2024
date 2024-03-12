@@ -28,6 +28,33 @@ class PizzaController extends AbstractController
         ]);
     }
 
+    #[Route('/order/{id}', name: 'order')]
+    public function order(Request $request, EntityManagerInterface $em,$id): Response
+    {
+        $pizza=$em->getRepository(Pizza::class)->find($id);
+        $order = new Order();
+        $form= $this->createForm(OrderType::class, $order);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $order= $form->getData();
+            $order->setPizza($pizza);
+            $em->persist($order);
+            $em->flush();
+
+            $this->addFlash('succes','Uw bestelling zal worden voorbereid!');
+        }
+
+        return $this->renderForm('pizza/order.html.twig', [
+            'controller_name' => 'PizzaController',
+            'orderForm'=>$form
+
+        ]);
+    }
+
+
+
     #[Route('/pizza/{id}', name: 'app_pizza')]
     public function pizzas(PizzaRepository $pizzaRepository, Category $category): Response
     {
