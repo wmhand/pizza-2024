@@ -28,6 +28,17 @@ class PizzaController extends AbstractController
         ]);
     }
 
+    #[Route('/pizza/{id}', name: 'app_pizza')]
+    public function pizzas(PizzaRepository $pizzaRepository, Category $category): Response
+    {
+        $pizzas = $pizzaRepository->findBy(['category'=> $category]);
+        return $this->render('pizza/pizza.html.twig', [
+            'controller_name' => 'PizzaController',
+            'pizzas' => $pizzas
+
+        ]);
+    }
+
     #[Route('/order/{id}', name: 'order')]
     public function order(Request $request, EntityManagerInterface $em,$id): Response
     {
@@ -54,17 +65,6 @@ class PizzaController extends AbstractController
     }
 
 
-
-    #[Route('/pizza/{id}', name: 'app_pizza')]
-    public function pizzas(PizzaRepository $pizzaRepository, Category $category): Response
-    {
-        $pizzas = $pizzaRepository->findBy(['category'=> $category]);
-        return $this->render('pizza/pizza.html.twig', [
-            'controller_name' => 'PizzaController',
-            'pizzas' => $pizzas
-
-        ]);
-    }
 
 
 
