@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d317ff4b-7af3-4357-95dc-9ca6f6d6c11e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Form/OrderType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/SizeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pizza/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pizza-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pizza-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PizzaController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,6 +196,7 @@
       <updated>1710242827104</updated>
       <workItem from="1710242829129" duration="1839000" />
       <workItem from="1711102955362" duration="796000" />
+      <workItem from="1711538585748" duration="2082000" />
     </task>
     <servers />
   </component>

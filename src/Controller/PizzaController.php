@@ -65,6 +65,15 @@ class PizzaController extends AbstractController
     }
 
 
+    #[Route('/login', name: 'login')]
+    public function login(OrderRepository $orderRepository): Response
+    {        $orders = $orderRepository->findAll();
+        return $this->render('pizza/login.html.twig',
+            [            'orders' => $orders        ]);
+    }
+
+
+
 
 
 
